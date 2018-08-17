@@ -26,12 +26,12 @@ RUN mkdir -p /opt/startup
 COPY init_container.sh /opt/startup/init_container.sh
 
 # setup default site
-RUN mkdir /opt/defaultsite
-COPY hostingstart.html /opt/defaultsite
-COPY application.py /opt/defaultsite
+#RUN mkdir /opt/defaultsite
+COPY hostingstart.html /home/site/wwwroot
+COPY application.py /home/site/wwwroot
 
 # configure startup
-RUN chmod -R 777 /opt/startup
+RUN chmod -R 777 /home/site/wwwroot
 COPY entrypoint.py /usr/local/bin
 
 ENTRYPOINT ["/opt/startup/init_container.sh"]
