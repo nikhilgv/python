@@ -3,7 +3,7 @@ import glob
 import os
 
 HOME_SITE="/home/site/wwwroot"
-DEFAULT_SITE="/opt/defaultsite"
+DEFAULT_SITE="/home/site/wwwroot"
 STARTUP_COMMAND_FILE="/opt/startup/startupCommand"
 APPSVC_VIRTUAL_ENV="antenv"
 
